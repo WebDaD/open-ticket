@@ -2,7 +2,7 @@
 
 A small, fast and simple Ticket Service designed to solve common problems.
 
-## Problems
+## Problems and their solutions
 
 There are many problems in many ticket-systems today.  
 This Project wants to solve them.
@@ -23,7 +23,7 @@ You want to have some custom fields for some tickets but not for all.
 
 Our solution is to save each ticket as JSON-Object, so we can simply add, remove or rename fields here.
 
-### Renaming of Info
+### Renaming of Information
 
 You add a service to a ticket, but the service is renamed later.  
 But your ticket should be known under the old service...
@@ -75,3 +75,29 @@ All this can be done using the automation-Microservice with the config
 All Config-Files are JSON-Files on your Disk.
 
 We Recommend using git to keep track of changes.
+
+### Customer Data
+
+You want to recognize Customers and not everytime ask all the infos.
+
+On First entry for a customer, its data are not only save to the ticket but to a global customers list, to be avaiable on creating a ticket.
+
+### Second Level Notification
+
+Your Backend-Engineers only want to see tickets they can solve.
+
+They may subsribe to one or more filters.  
+If a filter matches, a mail with the Ticket will be send to the engineer.
+
+### Manage Planned / Unplanned Service Outtages
+
+Sometimes a service will be out-of-order, wether planned or not. You dont want every ticket about this service to get trought your service desk.
+
+A Calendar with outage-Date for every service can be procured and is seen on the ticket-Creation.  
+It may also be visible on the user-portal or any other platform you wanrt.
+
+### Reporting
+
+You want information about the system, the tickets, ...
+
+A special micro-service can get these information. Every Report has a config-File in the system, allowing for easy sharing or changing.
